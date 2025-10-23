@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box; 
+  /* Sets the default box-sizing rule for the entire page.
+     "border-box" means that when we set width or height for an element,
+     it will include the element’s content, padding, and border in that size.
+     This makes layouts easier to control. */
+  margin: 0;  /* Removes default space around elements */
+  padding: 0; /* Removes internal space */  
+  height: 100%;
+  font-family: Arial, sans-serif; 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; 
+  /* Applies the same box-sizing rule ("border-box") 
+     to ALL elements (*), and also to their ::before and ::after
+     pseudo-elements. 
+     Using "inherit" makes them follow whatever the html element uses,
+     keeping sizing consistent across the entire page. */
+}
+
+
+img {
+    width: 25%;
+    height: auto;
+}
+
+/* ===============================
+   🖤 GITHUB LOGIN BUTTON STYLE
+   =============================== */
+
+/* Adds some space at the top and centers everything horizontally */
+.button-container {
+  margin-top: 10px;               /* Pushes button down for visual space */
+  text-align: center;             /* Centers the button horizontally */
+  font-family: Arial, sans-serif; /* Sets a clean, easy-to-read font */
+}
+
+/* Styles for the GitHub login button */
+.login-btn {
+  background-color: #24292f;  /* GitHub dark gray/black color */
+  color: white;               /* White text for contrast */
+  border: none;               /* Removes the outline border */
+  border-radius: 6px;         /* Slightly rounded corners like GitHub’s */
+  padding: 10px 25px;         /* Adds inside spacing for size and comfort */
+  font-size: 16px;            /* Readable text size */
+  font-weight: 500;           /* Makes the text slightly bolder */
+  cursor: pointer;            /* Shows hand icon when hovering */
+  transition: background-color 0.3s; /* Smooth color fade when hovering */
+  margin-bottom: 50px;    /* Space below the button */
+}
+
+/* Hover effect — lighter black color */
+.login-btn:hover {
+  background-color: #2f363d;  /* Slightly lighter shade when hovered */
+}
