@@ -1,0 +1,39 @@
+html { box-sizing: border-box; } /* Makes sizes include padding/border */
+*,*::before,*::after { box-sizing: inherit; } /* Keeps sizing consistent */
+
+body { margin: 0; /* Removes default gaps */
+       font-family: Arial, sans-serif; /* Simple, readable font */
+       line-height: 1.5; /* Easier to read text */
+       color: #2b2b2b; /* Dark earthy gray for text */
+       background-color: #f3efe7; } /* Warm, neutral page background */
+
+.hero { padding: 60px 16px; /* Space around the hero */
+        text-align: center; /* Centers all text */
+        background-color: #e9e4d8; /* Soft sand tone for the hero */
+        border-bottom: 1px solid #d6d0c3; } /* Gentle divider line */
+
+.hero-box { max-width: 720px; /* Keeps line length comfortable */
+            margin: 0 auto; } /* Centers the box horizontally */
+
+h1 { margin: 0 0 10px 0; /* Space below the main heading */
+     font-size: 40px; /* Large, clear title size */
+     letter-spacing: 0.5px; } /* Slightly opens the letters */
+
+h2 { margin: 0 0 16px 0; /* Space below the subheading */
+     font-size: 20px; /* Smaller than the main heading */
+     color: #4a4a3f; } /* Muted olive-gray for hierarchy */
+
+p { margin: 0 0 24px 0; /* Space below the paragraph */
+    font-size: 16px; /* Comfortable reading size */ }
+
+.cta-btn { display: inline-block; /* Lets padding act like a button */
+           text-decoration: none; /* Removes underline */
+           background-color: #6b7a40; /* Earthy olive button */
+           color: #ffffff; /* White text for contrast */
+           padding: 12px 22px; /* Button inner space */
+           border-radius: 6px; /* Soft rounded corners */
+           font-weight: 600; /* Makes the label stand out */
+           transition: background-color 0.25s, box-shadow 0.25s; } /* Smooth hover */
+
+.cta-btn:hover { background-color: #5e6b39; /* Slightly darker on hover */
+                 box-shadow: 0 4px 10px rgba(0,0,0,0.15); } /* Soft lift effect */

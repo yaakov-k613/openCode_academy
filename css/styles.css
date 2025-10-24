@@ -52,7 +52,10 @@ img {
   margin-bottom: 50px;    /* Space below the button */
 }
 
-/* Hover effect — lighter black color */
+
+/* Hover effect — add color, lift, and glow */
 .login-btn:hover {
-  background-color: #2f363d;  /* Slightly lighter shade when hovered */
+  background-color: #0080ff; /* Slightly lighter shade when hovered */
+  transform: scale(1.05);    /* Gently enlarges the button */
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); /* Adds a soft shadow underneath */
 }
