@@ -1,39 +1,79 @@
-html { box-sizing: border-box; } /* Makes sizes include padding/border */
-*,*::before,*::after { box-sizing: inherit; } /* Keeps sizing consistent */
+html { box-sizing: border-box; } /* Include padding & border in all sizes */
+*, *::before, *::after { box-sizing: inherit; } /* Keep sizing consistent */
 
-body { margin: 0; /* Removes default gaps */
-       font-family: Arial, sans-serif; /* Simple, readable font */
-       line-height: 1.5; /* Easier to read text */
-       color: #2b2b2b; /* Dark earthy gray for text */
-       background-color: #f3efe7; } /* Warm, neutral page background */
+body {
+  margin: 0; /* Removes browser default spacing */
+  font-family: Arial, sans-serif; /* Simple readable font */
+  line-height: 1.5; /* Makes paragraphs easier to read */
+  color: #2b2b2b; /* Earthy dark gray text */
+  background-color: #f3efe7; /* Warm neutral background */
+}
 
-.hero { padding: 60px 16px; /* Space around the hero */
-        text-align: center; /* Centers all text */
-        background-color: #e9e4d8; /* Soft sand tone for the hero */
-        border-bottom: 1px solid #d6d0c3; } /* Gentle divider line */
+/* ========== IMAGE ABOVE HERO ========== */
+.hero-image-container {
+  text-align: center; /* Centers the image horizontally */
+  margin-top: 40px; /* Adds space from top of the page */
+  margin-bottom: 20px; /* Space between image and hero section */
+}
 
-.hero-box { max-width: 720px; /* Keeps line length comfortable */
-            margin: 0 auto; } /* Centers the box horizontally */
+.hero-image {
+  display: block; /* Removes inline spacing */
+  margin: 0 auto; /* Centers image */
+  margin-bottom: 20px; /* Space below image */
+  width: 300px; /* Fixed width for better control */
+  max-width: 800px; /* Prevents it from getting too big */
+  height: auto; /* Keeps natural proportions */
+  border-radius: 50%; /* Rounds image into a circle */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
 
-h1 { margin: 0 0 10px 0; /* Space below the main heading */
-     font-size: 40px; /* Large, clear title size */
-     letter-spacing: 0.5px; } /* Slightly opens the letters */
+/* ========== HERO SECTION ========== */
+.hero {
+  /* padding: 60px 16px; Adds space inside hero section */
+  text-align: center; /* Centers text */
+  /* background-color: #e9e4d8; Soft sand tone background */
+  /* border-top: 1px solid #d6d0c3; Gentle divider above */
+  /* border-bottom: 1px solid #d6d0c3; Gentle divider below */
+}
 
-h2 { margin: 0 0 16px 0; /* Space below the subheading */
-     font-size: 20px; /* Smaller than the main heading */
-     color: #4a4a3f; } /* Muted olive-gray for hierarchy */
+.hero-box {
+  max-width: 596px; /* Limits text width for readability */
+  margin: 0 auto; /* Centers hero box horizontally */
+}
 
-p { margin: 0 0 24px 0; /* Space below the paragraph */
-    font-size: 16px; /* Comfortable reading size */ }
+h1 {
+  margin: 0 0 10px 0; /* Space below main heading */
+  font-size: 40px; /* Large readable title */
+  letter-spacing: 0.5px; /* Opens up the letters slightly */
+}
 
-.cta-btn { display: inline-block; /* Lets padding act like a button */
-           text-decoration: none; /* Removes underline */
-           background-color: #6b7a40; /* Earthy olive button */
-           color: #ffffff; /* White text for contrast */
-           padding: 12px 22px; /* Button inner space */
-           border-radius: 6px; /* Soft rounded corners */
-           font-weight: 600; /* Makes the label stand out */
-           transition: background-color 0.25s, box-shadow 0.25s; } /* Smooth hover */
+h2 {
+  margin: 0 0 16px 0; /* Space below subheading */
+  font-size: 20px; /* Smaller than main heading */
+  color: #4a4a3f; /* Muted olive-gray for warmth */
+}
 
-.cta-btn:hover { background-color: #5e6b39; /* Slightly darker on hover */
-                 box-shadow: 0 4px 10px rgba(0,0,0,0.15); } /* Soft lift effect */
+p {
+  margin: 0 0 24px 0; /* Space below paragraph */
+  font-size: 16px; /* Comfortable reading size */
+}
+
+.cta-btn {
+  display: inline-block; /* Lets padding act like a button */
+  text-decoration: none; /* Removes underline */
+  background-color: #6b7a40; /* Earthy olive color */
+  color: #ffffff; /* White text for contrast */
+  padding: 12px 22px; /* Adds inside space */
+  border-radius: 6px; /* Soft rounded corners */
+  font-weight: 600; /* Makes button text stand out */
+  transition: background-color 0.25s, box-shadow 0.25s; /* Smooth hover animation */
+}
+
+.cta-btn:hover {
+  background-color: #5e6b39; /* Slightly darker olive on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adds a subtle lift */
+}
+
+.cta-btn:active {
+  background-color: #4f5a30; /* Even darker olive on click */
+}
