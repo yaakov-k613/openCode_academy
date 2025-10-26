@@ -1,80 +1,56 @@
-html { box-sizing: border-box; } /* Include padding & border in all sizes */
-*, *::before, *::after { box-sizing: inherit; } /* Keep sizing consistent */
+/* Base sizing reset */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 
+/* Futuristic dark canvas with subtle gradient */
 body {
-  margin: 0; /* Removes browser default spacing */
-  font-family: Arial, sans-serif; /* Simple readable font */
-  line-height: 1.5; /* Makes paragraphs easier to read */
-  color: #2b2b2b; /* Earthy dark gray text */
-  background-color: #f3efe7; /* Warm neutral background */
+  margin: 0;                                   /* Remove default gaps */
+  font-family: 'Rubik', Arial, sans-serif;     /* Modern geometric font */
+  color: #e6f0ff;                              /* Soft cyan-white text */
+  background: linear-gradient(135deg,#0b0f14,#101820);
+  line-height: 1.55;                           /* Comfortable reading */
 }
 
-/* ========== IMAGE ABOVE HERO ========== */
-.hero-image-container {
-  text-align: center; /* Centers the image horizontally */
-  margin-top: 40px; /* Adds space from top of the page */
-  margin-bottom: 20px; /* Space between image and hero section */
-}
-
+/* Image above hero with circular glow */
+.hero-image-container { text-align: center; padding: 40px 16px 10px; }
 .hero-image {
-  display: block; /* Removes inline spacing */
-  margin: 0 auto; /* Centers image */
-  margin-bottom: 20px; /* Space below image */
-  width: 180px; /* Fixed width for better control */
-  max-width: 800px; /* Prevents it from getting too big */
-  height: auto; /* Keeps natural proportions */
-  border-radius: 50%; /* Rounds image into a circle */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  display: block; margin: 0 auto 24px; width: 200px; height: auto; border-radius: 50%;
+  box-shadow:
+    0 0 0 6px rgba(255,255,255,0.06),         /* thin outer ring */
+    0 18px 40px rgba(0,190,255,0.35);         /* cyan glow drop shadow */
 }
 
-/* ========== HERO SECTION ========== */
-.hero {
-  /* padding: 60px 16px; Adds space inside hero section */
-  text-align: center; /* Centers text */
-  /* background-color: #e9e4d8; Soft sand tone background */
-  /* border-top: 1px solid #d6d0c3; Gentle divider above */
-  /* border-bottom: 1px solid #d6d0c3; Gentle divider below */
-}
-
+/* Hero area with “glass card” feel (no advanced filters) */
+.hero { padding: 28px 16px 60px; text-align: center; }
 .hero-box {
-  max-width: 596px; /* Limits text width for readability */
-  margin: 0 auto; /* Centers hero box horizontally */
+  max-width: 640px; margin: 0 auto; padding: 28px 22px;
+  background: rgba(255,255,255,0.04);         /* translucent panel */
+  border: 1px solid rgba(255,255,255,0.08);   /* subtle border */
+  border-radius: 14px;                        /* soft corners */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);   /* depth on dark bg */
 }
 
-h1 {
-  margin: 0 0 10px 0; /* Space below main heading */
-  font-size: 58px; /* Large readable title */
-  letter-spacing: 0.5px; /* Opens up the letters slightly */
-  font-family: 'Rubik', sans-serif; /* Modern geometric font */
-}
+/* Typographic polish */
+h1 { margin: 0 0 10px; font-size: 56px; letter-spacing: 0.5px; text-shadow: 0 2px 14px rgba(0,190,255,0.25); }
+h2 { margin: 0 0 16px; font-size: 20px; color: #a7b7c8; }
+p  { margin: 0 0 26px; font-size: 16px; color: #d7e2ee; }
 
-h2 {
-  margin: 0 0 16px 0; /* Space below subheading */
-  font-size: 20px; /* Smaller than main heading */
-  color: #4a4a3f; /* Muted olive-gray for warmth */
-}
-
-p {
-  margin: 0 0 24px 0; /* Space below paragraph */
-  font-size: 16px; /* Comfortable reading size */
-}
-
+/* CTA: neon-edge pill, simple transitions */
 .cta-btn {
-  display: inline-block; /* Lets padding act like a button */
-  text-decoration: none; /* Removes underline */
-  background-color: #6b7a40; /* Earthy olive color */
-  color: #ffffff; /* White text for contrast */
-  padding: 12px 22px; /* Adds inside space */
-  border-radius: 6px; /* Soft rounded corners */
-  font-weight: 600; /* Makes button text stand out */
-  transition: background-color 0.25s, box-shadow 0.25s; /* Smooth hover animation */
+  display: inline-block; text-decoration: none; font-weight: 600; letter-spacing: 0.3px;
+  color: #03121a;                               /* dark label for contrast */
+  background: linear-gradient(90deg,#00d1ff,#46f0c1); /* cyan→mint */
+  padding: 12px 26px; border-radius: 999px;     /* pill shape */
+  box-shadow:
+    0 8px 18px rgba(0,209,255,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.35);
+  transition: transform 0.18s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
-
 .cta-btn:hover {
-  background-color: #5e6b39; /* Slightly darker olive on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adds a subtle lift */
+  transform: translateY(-2px);                  /* slight lift */
+  box-shadow:
+    0 12px 26px rgba(0,209,255,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.55);
+  opacity: 0.98;                                /* tiny sheen */
 }
-
-.cta-btn:active {
-  background-color: #4f5a30; /* Even darker olive on click */
-}
+.cta-btn:active { transform: translateY(0); opacity: 0.93; }
