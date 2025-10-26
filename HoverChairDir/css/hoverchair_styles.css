@@ -20,7 +20,7 @@ body {
   display: block; /* Removes inline spacing */
   margin: 0 auto; /* Centers image */
   margin-bottom: 20px; /* Space below image */
-  width: 300px; /* Fixed width for better control */
+  width: 180px; /* Fixed width for better control */
   max-width: 800px; /* Prevents it from getting too big */
   height: auto; /* Keeps natural proportions */
   border-radius: 50%; /* Rounds image into a circle */
@@ -43,8 +43,9 @@ body {
 
 h1 {
   margin: 0 0 10px 0; /* Space below main heading */
-  font-size: 40px; /* Large readable title */
+  font-size: 58px; /* Large readable title */
   letter-spacing: 0.5px; /* Opens up the letters slightly */
+  font-family: 'Rubik', sans-serif; /* Modern geometric font */
 }
 
 h2 {
