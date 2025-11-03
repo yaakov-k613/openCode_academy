@@ -59,3 +59,55 @@ img {
   transform: scale(1.05);    /* Gently enlarges the button */
   box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); /* Adds a soft shadow underneath */
 }
+
+/* Make all elements use border-box sizing (easier layout math) */
+* { box-sizing: border-box; }
+
+/* Full-page wrapper so we can center the button nicely */
+.page-wrapper {
+  min-height: 100vh;          /* Page at least as tall as the viewport */
+  display: flex;              /* Use flexbox to center content */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
+  background: #0f172a;        /* Dark navy background for contrast */
+  font-family: system-ui, sans-serif; /* Clean default font */
+}
+
+/* Base style for the Twitter-style button */
+.twitter-button {
+  display: inline-flex;       /* Align icon and text in a row */
+  align-items: center;        /* Vertically center icon and text */
+  gap: 8px;                   /* Space between icon and label */
+  padding: 10px 20px;         /* Inner space around content */
+  border-radius: 999px;       /* Big radius = pill shape */
+  background: #1d9bf0;        /* Twitter blue color */
+  color: #ffffff;             /* White text on blue */
+  text-decoration: none;      /* Remove underline from link */
+  font-weight: 600;           /* Slightly bold label */
+  letter-spacing: 0.02em;     /* Tiny spacing for a modern look */
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  /* Smooth animation when hovering */
+}
+
+/* Hover effect to make the button feel clickable */
+.twitter-button:hover {
+  background: #1a8cd8;        /* Slightly darker blue on hover */
+  transform: translateY(-1px);/* Move up 1px for “lift” effect */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25); /* Soft shadow under button */
+}
+
+/* Container for the icon */
+.twitter-icon svg {
+  width: 18px;                /* Icon width */
+  height: 18px;               /* Icon height */
+  stroke: currentColor;       /* Use the text color (white) for the lines */
+  stroke-width: 2.2;          /* Thickness of the X lines */
+  stroke-linecap: round;      /* Rounded line ends for smoother look */
+}
+
+/* Label text next to the icon */
+.twitter-label {
+  font-size: 0.95rem;         /* Slightly smaller than default text */
+  white-space: nowrap;        /* Prevent text from wrapping to next line */
+}
+

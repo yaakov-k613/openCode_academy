@@ -1,0 +1,71 @@
+/* Give everything a soft, consistent box model */
+* { box-sizing: border-box; }
+
+/* Light background for the whole page */
+body {
+  font-family: system-ui, sans-serif; /* Clean modern font */
+  background-color: #f8f6fb;          /* Very light lavender background */
+  display: flex;                      /* Enables centering */
+  justify-content: center;            /* Center horizontally */
+  align-items: center;                /* Center vertically */
+  height: 100vh;                      /* Full viewport height */
+  margin: 0;                          /* Remove default margins */
+}
+
+/* White card container for the content */
+.container {
+  background-color: #ffffff;           /* White form background */
+  padding: 40px;                       /* Inner spacing */
+  border-radius: 12px;                 /* Smooth corners */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* Soft shadow */
+  max-width: 400px;                    /* Restrict width for balance */
+  text-align: center;                  /* Center text */
+}
+
+/* Product heading styling */
+h1 {
+  color: #471869;                      /* Deep purple brand color */
+  font-size: 1.8rem;                   /* Medium-large heading */
+  margin-bottom: 12px;                 /* Space below heading */
+}
+
+/* Short paragraph under the heading */
+.description {
+  color: #555;                         /* Soft gray text for readability */
+  font-size: 1rem;
+  margin-bottom: 24px;                 /* Space before the form */
+}
+
+/* Layout for the form */
+.signup-form {
+  display: flex;                       /* Align input and button horizontally */
+  flex-direction: column;              /* Stack vertically for simplicity */
+  gap: 12px;                           /* Space between fields */
+}
+
+/* Email input styling */
+.signup-form input[type="email"] {
+  padding: 10px 14px;                  /* Comfortable inner spacing */
+  font-size: 1rem;                     /* Easy to read */
+  border: 1px solid #ccc;              /* Light border */
+  border-radius: 8px;                  /* Rounded corners */
+  outline: none;                       /* Remove blue focus ring */
+}
+
+/* Button styling */
+.signup-form button {
+  background-color: #471869;           /* Brand purple */
+  color: #fff;                         /* White text */
+  border: none;                        /* Remove border */
+  border-radius: 8px;                  /* Match input shape */
+  padding: 12px 0;                     /* Vertical padding */
+  font-size: 1rem;
+  font-weight: 600;                    /* Slightly bold text */
+  cursor: pointer;                     /* Show pointer on hover */
+  transition: background 0.2s ease;    /* Smooth hover animation */
+}
+
+/* Button hover effect */
+.signup-form button:hover {
+  background-color: #5d1e8f;           /* Slightly lighter purple */
+}
